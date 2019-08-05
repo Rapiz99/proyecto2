@@ -1,0 +1,21 @@
+.container{ 
+    margin-top:20px;
+}
+.row{
+    background: cyan;
+}
+.columna{
+    background: lightgreen;
+    text-align: center;
+    border: 2px solid
+}
+.columnaInferior{
+    background: green;
+    padding: 10px;
+    border: 2px solid yellow;
+    text-align: center;
+}
+
+.col, .col-6{
+    text-align: center;
+}

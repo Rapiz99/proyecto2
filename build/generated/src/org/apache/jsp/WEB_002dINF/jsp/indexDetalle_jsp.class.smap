@@ -1,0 +1,19 @@
+SMAP
+indexDetalle_jsp.java
+JSP
+*S JSP
+*F
++ 0 indexDetalle.jsp
+WEB-INF/jsp/indexDetalle.jsp
+*L
+5,18:54
+22:97,11
+23,2:108
+25,2:110,3
+27,3:116
+30:119,3
+31:122
+32:123,3
+33,3:126
+35,5:74
+*E

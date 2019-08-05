@@ -1,0 +1,17 @@
+.row{
+    background: crimson;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.columna{
+    background: palegoldenrod;
+    text-align: center;
+    padding: 10px;
+    border: 2px blue solid;
+}
+
+.margen{
+    margin-left: 100px;
+
+}
+

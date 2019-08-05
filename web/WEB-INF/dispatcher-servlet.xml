@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">homeController</prop>
+                <prop key="indexPro.htm">ProController</prop>
+                <prop key="AgregarPro.htm">ProController</prop>
+                 <prop key="editarPro.htm">ProController</prop>
+                 <prop key="deletePro.htm">ProController</prop>
+                  <prop key="indexPe.htm">PeController</prop>
+                   <prop key="AgregarPe.htm">PeController</prop>
+                   <prop key="editarPe.htm">PeController</prop>
+                   <prop key="deletePe.htm">PeController</prop>
+                   <prop key="indexllanta.htm">llantaController</prop>
+                   <prop key="Agregarllanta.htm">llantaController</prop>
+                   <prop key="editarllanta.htm">llantaController</prop>
+                   <prop key="deletellanta.htm">llantaController</prop>
+                   <prop key="indexVehiculo.htm">vehicuController</prop>
+                   <prop key="AgregarVehiculo.htm">vehicuController</prop>
+                    <prop key="editarVehiculo.htm">vehicuController</prop>
+                     <prop key="deleteVehiculo.htm">vehicuController</prop>
+                     <prop key="indexUsu.htm">usuController</prop>
+                     <prop key="AgregarUsu.htm">usuController</prop>
+                     <prop key="editarUsu.htm">usuController</prop>
+                     <prop key="deleteUsu.htm">usuController</prop>
+                     
+                     <prop key="indexDetalle.htm">DetalleController</prop>
+                     <prop key="AgregarDetalle.htm">DetalleController</prop>
+                     <prop key="editarDetalle.htm">DetalleController</prop>
+                     <prop key="deleteDetalle.htm">DetalleController</prop>
+                     <prop key="indexfactura.htm">FacturaController</prop>
+                     <prop key="Agregarfactura.htm">FacturaController</prop>
+                      <prop key="editarfactura.htm">FacturaController</prop>
+                       <prop key="deletefactura.htm">FacturaController</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+    <bean name="homeController" class="Controller.homeController"/>
+    <bean name="ProController" class="Controller.ProController"/>
+     <bean name="PeController" class="Controller.PeController"/>
+      <bean name="llantaController" class="Controller.llantaController"/>
+      <bean name="vehicuController" class="Controller.vehicuController"/>
+       <bean name="usuController" class="Controller.usuController"/>
+        <bean name="DetalleController" class="Controller.DetalleController"/>
+        <bean name="FacturaController" class="Controller.FacturaController"/>
+</beans>
